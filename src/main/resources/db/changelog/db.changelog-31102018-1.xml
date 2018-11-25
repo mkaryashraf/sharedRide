@@ -1,0 +1,25 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet author="Makary Hanna" id="31102018-1-1">
+        <addColumn tableName="ride">
+        <column name="duration_minutes" type="BigInt"/>
+    </addColumn>
+    </changeSet>   
+    
+ <changeSet author="Makary Hanna" id="31102018-1-2">
+    <modifyDataType 
+            columnName="start_time"
+            newDataType="timestamp"
+            tableName="ride"/>
+    
+    <modifyDataType 
+            columnName="end_time"
+            newDataType="timestamp"
+            tableName="ride"/>
+    
+</changeSet>
+</databaseChangeLog>
